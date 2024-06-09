@@ -23,8 +23,8 @@ const guides = [
 
 export default function Home() {
   return (
-    <>
-      <MaxWidthWrapper>
+    <div className="flex flex-col min-h-screen">
+      <MaxWidthWrapper className="flex-grow">
         <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             Transform Your Journey from <span className="text-blue-500">Bum to Runner</span>
@@ -44,7 +44,7 @@ export default function Home() {
       </MaxWidthWrapper>
 
       {/* Features */}
-      <section className="border-t border-gray-200 bg-gray-50">
+      <section className="border-t border-gray-200 bg-gray-50 mt-auto mb-4">
         <MaxWidthWrapper className="py-20">
           <div className="mt-4 pb-2 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
             {guides.map((guide) => (
@@ -67,6 +67,6 @@ export default function Home() {
           </div>
         </MaxWidthWrapper>
       </section>
-    </>
+    </div>
   );
 }
